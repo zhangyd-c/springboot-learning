@@ -11,6 +11,7 @@
 		<module>springboot-jsp</module>
 		<module>springboot-freemark</module>
     <module>springboot-mybatis</module>
+    <module>springboot-schedule</module>
   </modules>
 
 	<parent>
