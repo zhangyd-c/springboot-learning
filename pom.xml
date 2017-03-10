@@ -12,6 +12,7 @@
 		<module>springboot-freemark</module>
     <module>springboot-mybatis</module>
     <module>springboot-schedule</module>
+    <module>springboot-logback</module>
   </modules>
 
 	<parent>
