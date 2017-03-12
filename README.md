@@ -3,17 +3,17 @@ My Springboot modules
 
 #### Springboot + maven 多模块项目
 
-##### [x] 1. [springboot整合jsp](https://github.com/zhangyd-c/springboot/tree/master/springboot-jsp)
-##### [x] 2. [springboot整合freemarker](https://github.com/zhangyd-c/springboot/tree/master/springboot-freemark)
-##### [x] 3. [springboot整合mybatis与分页插件](https://github.com/zhangyd-c/springboot/tree/master/springboot-mybatis)
-##### [x] 4. [springboot开启任务调度](https://github.com/zhangyd-c/springboot/tree/master/springboot-schedule)
-##### [x] 5. [springboot整合logback](https://github.com/zhangyd-c/springboot/tree/master/springboot-logback)
-##### [ ] 6. springboot使用过滤器 监听器 拦截器
-##### [ ] 7. springboot使用AOP
-##### [ ] 8. springboot自定义异常
-##### [ ] 9. springboot读取application.properties和自定义properties文件
-##### [ ] 10. springboot打包、部署
-##### [ ] 11. springboot自动部署jar
+- [x] ##### 1. [springboot整合jsp](https://github.com/zhangyd-c/springboot/tree/master/springboot-jsp)
+- [x] ##### 2. [springboot整合freemarker](https://github.com/zhangyd-c/springboot/tree/master/springboot-freemark)
+- [x] ##### 3. [springboot整合mybatis与分页插件](https://github.com/zhangyd-c/springboot/tree/master/springboot-mybatis)
+- [x] ##### 4. [springboot开启任务调度](https://github.com/zhangyd-c/springboot/tree/master/springboot-schedule)
+- [x] ##### 5. [springboot整合logback](https://github.com/zhangyd-c/springboot/tree/master/springboot-logback)
+- [ ] ##### 6. springboot使用过滤器 监听器 拦截器
+- [ ] ##### 7. springboot使用AOP
+- [ ] ##### 8. springboot自定义异常
+- [ ] ##### 9. springboot读取application.properties和自定义properties文件
+- [ ] ##### 10. springboot打包、部署
+- [ ] ##### 11. springboot自动部署jar
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
