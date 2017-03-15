@@ -9,8 +9,8 @@ My Springboot modules
 - [x] 4. [springboot开启任务调度](https://github.com/zhangyd-c/springboot/tree/master/springboot-schedule)
 - [x] 5. [springboot整合logback](https://github.com/zhangyd-c/springboot/tree/master/springboot-logback)
 - [ ] 6. springboot使用过滤器 监听器 拦截器
-- [ ] 7. springboot使用AOP
-- [ ] 8. springboot自定义异常
+- [x] 7. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
+- [x] 8. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
 - [ ] 9. springboot读取application.properties和自定义properties文件
 - [ ] 10. springboot打包、部署
 - [ ] 11. springboot自动部署jar
