@@ -41,7 +41,11 @@ public class AppMybatisConfiguration {
         properties.setProperty("returnPageInfo", "check");
         properties.setProperty("params", "count=countSql");
         pageHelper.setProperties(properties);
-        //添加插件
+        // 添加插件
+        // PageHelper是Interceptor接口的实现类
+        // 基于接口实现的多态
+        // 指向接口的引用（pageHelper）必须是实现了该接口的一个类的实例程序（implements Interceptor），在运行时，根据对象引用的实际类型来执行对应的方法。
+        // 也就是说，可以根据这个特性，对SpringBoot定制特殊功能。
         sqlSessionFactoryBean.setPlugins(new Interceptor[]{pageHelper});
 
 
