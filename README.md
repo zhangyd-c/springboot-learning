@@ -8,12 +8,13 @@ My Springboot modules
 - [x] 3. [springboot整合mybatis与分页插件](https://github.com/zhangyd-c/springboot/tree/master/springboot-mybatis)
 - [x] 4. [springboot开启任务调度](https://github.com/zhangyd-c/springboot/tree/master/springboot-schedule)
 - [x] 5. [springboot整合logback](https://github.com/zhangyd-c/springboot/tree/master/springboot-logback)
-- [ ] 6. springboot使用过滤器 监听器 拦截器
-- [x] 7. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
-- [x] 8. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
-- [ ] 9. springboot读取application.properties和自定义properties文件
-- [ ] 10. springboot打包、部署
-- [ ] 11. springboot自动部署jar
+- [x] 6. [springboot使用过滤器监听器](https://github.com/zhangyd-c/springboot/tree/master/springboot-servlet)
+- [ ] 7. springboot拦截器
+- [x] 8. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
+- [x] 9. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
+- [ ] 10. springboot读取application.properties和自定义properties文件
+- [ ] 11. springboot打包、部署
+- [ ] 12. springboot自动部署jar
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
