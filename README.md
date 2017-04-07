@@ -12,9 +12,10 @@ My Springboot modules
 - [ ] 7. springboot拦截器
 - [x] 8. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
 - [x] 9. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
-- [ ] 10. springboot读取application.properties和自定义properties文件
-- [ ] 11. springboot打包、部署
-- [ ] 12. springboot自动部署jar
+- [ ] 10. springboot统一异常处理
+- [ ] 11. springboot读取application.properties和自定义properties文件
+- [ ] 12. springboot打包、部署
+- [ ] 13. springboot自动部署jar
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
