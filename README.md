@@ -16,6 +16,7 @@ My Springboot modules
 - [ ] 11. springboot读取application.properties和自定义properties文件
 - [ ] 12. springboot打包、部署
 - [ ] 13. springboot自动部署jar
+- [x] 14. [springboot整合POI导出Word文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-poi)
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
