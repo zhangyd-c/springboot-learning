@@ -13,7 +13,7 @@ My Springboot modules
 - [x] 8. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
 - [x] 9. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
 - [ ] 10. springboot统一异常处理
-- [x] 11. springboot读取*.properties和自定义properties文件(https://github.com/zhangyd-c/springboot/tree/master/springboot-property)
+- [x] 11. [springboot读取*.properties和自定义properties文件](https://github.com/zhangyd-c/springboot/tree/master/springboot-property)
 - [ ] 12. springboot打包、部署
 - [ ] 13. springboot自动部署jar
 - [x] 14. [springboot整合POI导出Word文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-poi)
