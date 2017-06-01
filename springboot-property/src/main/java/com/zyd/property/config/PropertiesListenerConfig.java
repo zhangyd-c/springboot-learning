@@ -13,7 +13,7 @@ import org.springframework.core.io.support.PropertiesLoaderUtils;
  * 第四种方式：PropertiesLoaderUtils
  * 
  * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
- * @date 2017年6月1日 下午3:32:37 
+ * @date 2017年6月1日 下午3:32:37
  * @version V1.0
  * @since JDK ： 1.7
  */
@@ -43,12 +43,12 @@ public class PropertiesListenerConfig {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public static String getProperty(String name) {
-        return propertiesMap.get(name).toString();
-    }
-	
+		return propertiesMap.get(name).toString();
+	}
+
 	public static Map<String, String> getAllProperty() {
-        return propertiesMap;
-    }
+		return propertiesMap;
+	}
 }
