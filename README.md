@@ -13,17 +13,19 @@ My Springboot modules
 - [x] 8. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
 - [x] 9. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
 - [ ] 10. springboot统一异常处理
-- [ ] 11. springboot读取application.properties和自定义properties文件
+- [x] 11. springboot读取*.properties和自定义properties文件(https://github.com/zhangyd-c/springboot/tree/master/springboot-property)
 - [ ] 12. springboot打包、部署
 - [ ] 13. springboot自动部署jar
 - [x] 14. [springboot整合POI导出Word文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-poi)
+- [x] 15. [springboot+Redis+nginx实现负载均衡和session共享](https://github.com/zhangyd-c/springboot/tree/master/springboot-session)
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
 1. [我的博客](http://www.flyat.cc)
-2. [我的微博](http://weibo.com/211230415)
-3. [我的头条号](http://www.toutiao.com/c/user/3286958681/)
-4. [我的mooc](http://www.imooc.com/u/1175248/articles)
+2. [我的工具](http://www.ztool.cc)
+3. [我的微博](http://weibo.com/211230415)
+4. [我的头条号](http://www.toutiao.com/c/user/3286958681/)
+5. [我的mooc](http://www.imooc.com/u/1175248/articles)
 
 ### 有任何问题可以
 - [new issue](https://github.com/zhangyd-c/springboot/issues)

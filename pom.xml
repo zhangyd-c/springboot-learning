@@ -17,6 +17,8 @@
 		<module>springboot-errorpage</module>
 		<module>springboot-servlet</module>
     <module>springboot-poi</module>
+    <module>springboot-session</module>
+    <module>springboot-property</module>
   </modules>
 
 	<parent>
