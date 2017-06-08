@@ -16,9 +16,10 @@
 		<module>springboot-aop</module>
 		<module>springboot-errorpage</module>
 		<module>springboot-servlet</module>
-    <module>springboot-poi</module>
-    <module>springboot-session</module>
-    <module>springboot-property</module>
+		<module>springboot-poi</module>
+		<module>springboot-session</module>
+		<module>springboot-property</module>
+    	<module>springboot-exception</module>
   </modules>
 
 	<parent>
