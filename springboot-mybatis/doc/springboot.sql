@@ -15,6 +15,8 @@ Date: 2017-03-10 15:33:13
 
 SET FOREIGN_KEY_CHECKS=0;
 
+CREATE DATABASE springboot;
+USE springboot;
 -- ----------------------------
 -- Table structure for message
 -- ----------------------------
