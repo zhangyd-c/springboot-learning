@@ -24,6 +24,16 @@
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
+		<!--
+			Spring Boot应用启动器Starter-parent:
+			官方推荐
+			其中集成了：
+			1、使用java6编译级别
+			2、使用utf-8编码
+			3、实现了通用的测试框架 (JUnit, Hamcrest, Mockito).
+			4、智能资源过滤
+			5、智能的插件配置(exec plugin, surefire, Git commit ID, shade).
+		-->
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.4.0.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
@@ -37,6 +47,10 @@
 		<!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
+			<!--
+				Spring Boot应用启动器Starter-web:
+				支持全栈式Web开发，包括Tomcat和spring-webmvc
+             -->
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
