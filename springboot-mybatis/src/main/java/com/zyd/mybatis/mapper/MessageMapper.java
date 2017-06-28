@@ -1,23 +1,23 @@
 package com.zyd.mybatis.mapper;
 
-import java.util.List;
-
+import com.zyd.mybatis.entity.Message;
+import com.zyd.mybatis.util.MyMapper;
 import org.springframework.stereotype.Repository;
 
-import com.zyd.mybatis.entity.Message;
+import java.util.List;
 
 /**
- * @Description
  * @author zhangyd
- * @date 2017年3月10日 下午2:42:45
  * @version V1.0
- * @since JDK ： 1.7
+ * @Description
+ * @date 2017年3月10日 下午2:42:45
  * @modify
  * @Review
+ * @since JDK ： 1.7
  */
 @Repository
-public interface MessageMapper {
-	List<Message> list();
+public interface MessageMapper extends MyMapper<Message> {
+    List<Message> list();
 
-	int count();
+    int count();
 }
