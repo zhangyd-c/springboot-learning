@@ -12,3 +12,32 @@
 
 ##### 项目中定时使用到cron表达式，详细使用方法，请参考[SpringTask中cron表达式整理记录](http://www.flyat.cc/article/120cd0ed892042e99f0d185ec12af968)
 
+# 增加动态修改cron的功能
+
+##### 本地只做测试，cron都是写死在程序中的，可以根据业务进行扩展，包括将cron持久化到DB中
+
+```java
+ @Override
+public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
+    // 定时任务一
+    taskRegistrar.addTriggerTask(new Runnable() {
+        @Override
+        public void run() {
+            // 此处执行定时任务的业务逻辑
+            System.out.println("定时任务一，当前时间：" + new Date());
+        }
+    }, new Trigger() {
+        @Override
+        public Date nextExecutionTime(TriggerContext triggerContext) {
+            // 定时任务触发，可修改定时任务的执行周期
+            CronTrigger trigger = new CronTrigger(cron);
+            Date nextExecDate = trigger.nextExecutionTime(triggerContext);
+            return nextExecDate;
+        }
+    });
+}
+```
+
+##### 修改日期：2017-07-18 16:52
+
+##### 注意：为了演示动态修改定时任务的cron，我将原AppSchedulingConfig定时类中的注解释掉了，如果需要可以直接放开注解
