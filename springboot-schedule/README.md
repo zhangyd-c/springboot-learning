@@ -37,7 +37,7 @@ public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
     });
 }
 ```
-
+ 
 ##### 修改日期：2017-07-18 16:52
 
 ##### 注意：为了演示动态修改定时任务的cron，我将原AppSchedulingConfig定时类中的注解释掉了，如果需要可以直接放开注解

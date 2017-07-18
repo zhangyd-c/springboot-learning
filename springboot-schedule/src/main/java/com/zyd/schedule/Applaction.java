@@ -17,7 +17,7 @@ public class Applaction {
 	// 修改动态定时任务的cron值
 	@RequestMapping("/updateTask")
 	public Object updateTask() {
-		dynamicScheduledConfig.setCron("0/3 * * * * ?");
+		dynamicScheduledConfig.setCron("0/2 * * * * ?");
 		return "success";
 	}
 

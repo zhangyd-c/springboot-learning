@@ -4,6 +4,9 @@ import org.springframework.scheduling.annotation.Scheduled;
 
 import java.util.Date;
 
+/**
+ * 临时禁止掉
+ */
 //@Component
 //@EnableScheduling
 public class AppSchedulingConfig {

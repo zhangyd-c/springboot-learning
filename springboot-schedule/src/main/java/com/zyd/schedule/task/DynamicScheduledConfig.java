@@ -27,7 +27,7 @@ import org.springframework.stereotype.Component;
 import java.util.Date;
 
 /**
- * springboot
+ * 动态定时任务
  * Created by yadong.zhang on com.zyd.schedule.task
  *
  * @Author: yadong.zhang
