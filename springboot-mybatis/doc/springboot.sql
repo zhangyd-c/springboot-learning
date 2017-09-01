@@ -18,7 +18,7 @@ SET FOREIGN_KEY_CHECKS=0;
 CREATE DATABASE springboot;
 USE springboot;
 -- ----------------------------
--- Table structure for message
+-- Table structure for custom
 -- ----------------------------
 DROP TABLE IF EXISTS `message`;
 CREATE TABLE `message` (

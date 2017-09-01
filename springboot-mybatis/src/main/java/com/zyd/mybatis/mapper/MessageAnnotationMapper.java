@@ -25,14 +25,14 @@ import java.util.List;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.mybatis.mapper
+ * Created by yadong.zhang on com.zyd.testMybatis.mapper
  * @Author: yadong.zhang
  * @Date: 2017/8/8 10:22
  */
 @Mapper
 public interface MessageAnnotationMapper {
 
-    @Select("SELECT NICK_NAME FROM message")
+    @Select("SELECT NICK_NAME FROM custom")
     @Results({
             @Result(property = "nickName",  column = "NICK_NAME")
     })
