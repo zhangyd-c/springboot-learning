@@ -1,17 +1,19 @@
 package com.zyd.schedule.task;
 
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Component;
 
 import java.util.Date;
 
 /**
  * 临时禁止掉
  */
-//@Component
-//@EnableScheduling
+@Component
+@EnableScheduling
 public class AppSchedulingConfig {
     /**
-     * 每7秒执行一次
+     * 每10秒执行一次
      *
      * @author zhangyd
      */

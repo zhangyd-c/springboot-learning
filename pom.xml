@@ -20,7 +20,9 @@
 		<module>springboot-session</module>
 		<module>springboot-property</module>
     	<module>springboot-exception</module>
-  </modules>
+		<module>springboot-mail</module>
+		<module>springboot-ssl</module>
+	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -35,7 +37,7 @@
 			5、智能的插件配置(exec plugin, surefire, Git commit ID, shade).
 		-->
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.4.0.RELEASE</version>
+		<version>1.5.6.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<properties>
@@ -44,19 +46,19 @@
 		<java.version>1.7</java.version>
 	</properties>
 	<dependencies>
-		<!--支持 Web 应用开发，包含 Tomcat 和 spring-mvc。 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<!--
-				Spring Boot应用启动器Starter-web:
-				支持全栈式Web开发，包括Tomcat和spring-webmvc
-             -->
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+		<!-- 程序监控、运维 -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
 		</dependency>
 
 		<!--springboot中修改完文件后自动reload的插件，修改完文件Ctrl + F9 Make一下就可以 -->

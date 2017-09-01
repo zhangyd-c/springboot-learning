@@ -14,7 +14,7 @@ public class RenderController {
   
     @RequestMapping("/")  
     public String index(Map<String, Object> model) {  
-        model.put("message", this.message);  
-        return "test";  
+        model.put("custom", this.message);
+        return "primary";
     } 
 }
