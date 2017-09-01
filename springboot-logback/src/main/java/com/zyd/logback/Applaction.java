@@ -31,7 +31,7 @@ public class Applaction {
             logback.xml中指定的默认输出级别为INFO，所以低于INFO级别(DEBUG、TRACE)的日志不会输出
             级别排序为： TRACE < DEBUG < INFO < WARN < ERROR
          */
-        LOGGER.info("{} -- This is a test with logback., Current time {}.", projectName, new Date());
+        LOGGER.info("{} -- This is a primary with logback., Current time {}.", projectName, new Date());
         LOGGER.trace("This level is TRACE.");
         LOGGER.debug("This level is DEBUG.");
         LOGGER.debug("This level is DEBUG.", LOGGER.isDebugEnabled());
