@@ -1,18 +1,7 @@
 package com.zyd.mybatis.config;
 
-import java.util.Properties;
-
-import org.apache.ibatis.plugin.Interceptor;
-import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.tomcat.jdbc.pool.DataSource;
-import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.stereotype.Component;
-
-import com.github.pagehelper.PageHelper;
 
 /**
  * flyat
@@ -24,11 +13,11 @@ import com.github.pagehelper.PageHelper;
  */
 @Component
 //指定扫描的mapper接口所在的包
-@MapperScan("com.zyd.mybatis.mapper")
+@MapperScan("com.zyd.testMybatis.mapper")
 public class AppMybatisConfiguration {
 //
-//    private static final String TYPE_ALIASES_PACKAGE = "com.zyd.mybatis.entity";
-//    private static final String MAPPER_LOCATION = "classpath:/mybatis/*.xml";
+//    private static final String TYPE_ALIASES_PACKAGE = "com.zyd.testMybatis.com.rest.entity";
+//    private static final String MAPPER_LOCATION = "classpath:/testMybatis/*.xml";
 //
 //    @Bean
 //    @Autowired
@@ -51,7 +40,7 @@ public class AppMybatisConfiguration {
 //        sqlSessionFactoryBean.setPlugins(new Interceptor[]{pageHelper});
 //
 //
-//        //mybatis.typeAliasesPackage：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名（看后边的UserMapper.xml介绍）
+//        //testMybatis.typeAliasesPackage：指定domain类的基包，即指定其在*Mapper.xml文件中可以使用简名来代替全类名（看后边的UserMapper.xml介绍）
 //        sqlSessionFactoryBean.setTypeAliasesPackage(TYPE_ALIASES_PACKAGE);
 //        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver().getResources(MAPPER_LOCATION));
 //

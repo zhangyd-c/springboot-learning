@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.mybatis.entity
+ * Created by yadong.zhang on com.zyd.testMybatis.com.rest.entity
  * User：yadong.zhang
  * Date：2017/6/27 17:44
  */

@@ -9,7 +9,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>springboot-mybatis</artifactId>
-	<name>springboot-mybatis</name>
+	<name>springboot-testMybatis</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
 		<!--springboot 集成Mybatis所需jar配置 start -->
@@ -18,7 +18,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
-		<!--mybatis-->
+		<!--testMybatis-->
 		<dependency>
 			<groupId>org.mybatis.spring.boot</groupId>
 			<artifactId>mybatis-spring-boot-starter</artifactId>
