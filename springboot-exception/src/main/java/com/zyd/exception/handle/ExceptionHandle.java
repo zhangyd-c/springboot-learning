@@ -9,21 +9,19 @@
  */
 package com.zyd.exception.handle;
 
-import java.sql.SQLException;
-
-import javax.servlet.http.HttpServletRequest;
-
+import com.zyd.exception.exception.BadRequestException;
+import com.zyd.exception.exception.NotFoundException;
+import com.zyd.exception.exception.ZhangydException;
+import com.zyd.exception.util.ExceptionResponse;
+import com.zyd.exception.util.ExceptionResponseUtil;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
-import com.zyd.exception.exception.BadRequestException;
-import com.zyd.exception.exception.NotFoundException;
-import com.zyd.exception.exception.ZhangydException;
-import com.zyd.exception.util.ExceptionResponse;
-import com.zyd.exception.util.ExceptionResponseUtil;
+import javax.servlet.http.HttpServletRequest;
+import java.sql.SQLException;
 
 /**
  * 统一异常处理类<br>
@@ -59,7 +57,6 @@ public class ExceptionHandle {
 	 * 捕获抛出的所有NotFoundException异常
 	 * 
 	 * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
-	 * @param request
 	 * @param ex
 	 * @return
 	 * @since JDK 1.7
@@ -76,7 +73,6 @@ public class ExceptionHandle {
 	 * 捕获抛出的所有BadRequestException异常
 	 * 
 	 * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a>
-	 * @param request
 	 * @param ex
 	 * @return
 	 * @since JDK 1.7
