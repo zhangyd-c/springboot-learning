@@ -7,7 +7,7 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>springboot-jsp</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>sb</name>
 	<url>http://maven.apache.org</url>
