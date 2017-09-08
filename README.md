@@ -3,7 +3,7 @@ My Springboot modules
 
 #### Springboot + maven 多模块项目
 
-- [x]  1. [springboot整合jsp](https://github.com/zhangyd-c/springboot/tree/master/springboot-jsp)
+- [x] 1. [springboot整合jsp](https://github.com/zhangyd-c/springboot/tree/master/springboot-jsp)
 - [x] 2. [springboot整合freemarker](https://github.com/zhangyd-c/springboot/tree/master/springboot-freemark)
 - [x] 3. [springboot整合mybatis与分页插件](https://github.com/zhangyd-c/springboot/tree/master/springboot-mybatis)
 - [x] 4. [springboot开启任务调度](https://github.com/zhangyd-c/springboot/tree/master/springboot-schedule)
@@ -18,6 +18,11 @@ My Springboot modules
 - [ ] 13. springboot自动部署jar
 - [x] 14. [springboot整合POI导出Word文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-poi)
 - [x] 15. [springboot+Redis+nginx实现负载均衡和session共享](https://github.com/zhangyd-c/springboot/tree/master/springboot-session)
+- [x] 16. [springboot+docker](https://github.com/zhangyd-c/springboot/tree/master/springboot-docker)
+- [x] 17. [springboot+mail实现邮件发送](https://github.com/zhangyd-c/springboot/tree/master/springboot-mail)
+- [x] 18. [springboot + mybatis + mapper + pageHealper 多数据源](https://github.com/zhangyd-c/springboot/tree/master/springboot-multi-datasource)
+- [x] 19. [Springboot集成SpringRestdocs生成Api文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-restdocs)
+- [x] 20. [Springboot开启HTTPS](https://github.com/zhangyd-c/springboot/tree/master/springboot-ssl)
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
