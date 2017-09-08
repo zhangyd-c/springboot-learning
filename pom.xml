@@ -22,7 +22,10 @@
     	<module>springboot-exception</module>
 		<module>springboot-mail</module>
 		<module>springboot-ssl</module>
-	</modules>
+		<module>springboot-multi-datasource</module>
+        <module>springboot-restdocs</module>
+        <module>springboot-docker</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
