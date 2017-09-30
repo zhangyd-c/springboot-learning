@@ -1,0 +1,58 @@
+/* head */
+.header{height: 65px; border-bottom: 1px solid #404553;  background-color: #393D49; color: #fff;}
+.logo{position: absolute; left: 0; top: 18px; color: white;font-size: 22px;}
+.logo img{width: 82px; height: 31px;}
+.logo small{
+	font-size: 10px;
+    position: relative;
+    top: -5px;
+    display: inline-block;
+    margin: 0 0 0 5px;
+    padding: 2px 8px;
+    vertical-align: super;
+    border-radius: 57px;
+    background: #7d8492;
+    }
+.version{margin: 0;font-family: Titillium Web,sans-serif;color: #fff;}
+.responseJson{padding: 0 0 50px 15px;}
+
+/* body */
+.site-content {padding: 0 10px 0 10px}
+.method{
+	text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    font-size: 0.7em;
+    text-align: center;
+    padding: 7px;
+    margin-right: 5px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -o-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -khtml-border-radius: 2px;
+    border-radius: 2px;
+}
+.delete{background-color: #a41e22;}
+.get{background-color: #0f6ab4;}
+.head{background-color: #ffd20f;}
+.options{background-color: #0f6ab4;}
+.patch{background-color: #D38042;}
+.post{background-color: #10a54a;}
+.put{background-color: #c5862b;}
+
+/*
+.delete_body{backgroud-color:#faf5ee;}
+.get_body{background-color: #ebf3f9;}
+.head_body{background-color: #fcffcd;}
+.options_body{background-color: #ebf3f9;}
+.patch_body{background-color: #faf0ef;}
+.post_body{background-color: #ebf7f0;}
+.put_body{background-color: #faf5ee;}
+*/
+
+.red{color: red}
+
+/* µ×²¿ */
+.footer{line-height: 44px; text-align: center; background-color: #eee; color: #666; }
+.footer a{padding: 0 5px;}

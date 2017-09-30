@@ -25,6 +25,7 @@
 		<module>springboot-multi-datasource</module>
         <module>springboot-restdocs</module>
         <module>springboot-docker</module>
+        <module>springboot-swagger</module>
     </modules>
 
 	<parent>

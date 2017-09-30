@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title id="title">Springboot - swagger RestApi文档</title>
+<meta name="renderer" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="format-detection" content="telephone=no">
+<link rel="stylesheet" type="text/css" href="/style/layui/css/layui.css" />
+<link rel="stylesheet" type="text/css" href="/style/css/global.css" />
+<link rel="stylesheet" type="text/css" href="/style/css/jquery.json-viewer.css" />
+    <style>
+        .zyd-fieldset{
+            float: left;
+            width: 370px;
+            height: 217px;
+            border: 1px dashed #e2e2e2;
+            margin: 10px 11px 20px;
+            padding: 0;
+        }
+        .zyd-legend{
+            margin-left: 20px;padding: 0 5px;font-size: 20px;font-weight: 300;color: #999;
+        }
+    </style>
+</head>
+<body>
+<script id="template" type="text/template">
+	<div class="layui-layout layui-layout-admin"
+		style="border-bottom: solid 3px #1aa094;">
+		<div class="layui-header header "> 
+			<div class="layui-main">
+				<div class="admin-login-box logo">
+                    <a href="/docs.html" class="version"><span>{{:info.title}}<small>{{:info.version}}</small></span></a>
+				</div>
+			</div>
+		</div>
+		<div class="layui-side layui-bg-black" id="admin-side">
+			<div class="layui-side-scroll" id="admin-navbar-side"
+				lay-filter="side">
+				<ul class="layui-nav layui-nav-tree beg-navbar">
+                    {{for tags itemVar="~tag"}}
+                        {{if name != "basic-error-controller"}}
+                        <li class="layui-nav-item"><a href="javascript:;"><i class="fa fa-cogs" aria-hidden="true" data-icon="fa-cogs"></i>
+                            <cite>{{:name}}</cite><span class="layui-nav-more"></span></a>
+                            <dl class="layui-nav-child">
+                                {{!--获取tags下面对应的方法--}}
+                                {{props ~root.paths itemVar="~path"}}
+                                    {{!--具体方法--}}
+                                    {{props prop}}
+                                        {{if prop.tags[0] == ~tag.name}}
+                                            <dd title="{{:~path.key}}">
+                                                <a href="javascript:;" name="a_path" path="{{:~path.key}}" method="{{:key}}" operationId="{{:prop.operationId}}">
+                                                    <span class="method {{:key}}">{{:key}}</span>
+                                                    <i class="fa fa-navicon" data-icon="fa-navicon"></i><cite>{{:prop.summary}}</cite>
+                                                </a>
+                                            </dd>
+                                        {{/if}}
+                                    {{/props}}
+                                {{/props}}
+                            </dl>
+                        </li>
+                        {{/if}}
+                    {{/for}}
+                    <li class="layui-nav-item"><a href="javascript:;"><i class="fa fa-cogs" aria-hidden="true" data-icon="fa-cogs"></i>
+                        <cite>响应格式</cite><span class="layui-nav-more"></span></a>
+                        <dl class="layui-nav-child">
+                            <a href="javascript:void(0);" id="resposneModel">
+                                <span class="method get">P</span>
+                                <i class="fa fa-navicon" data-icon="fa-navicon"></i><cite>响应格式、字段解析</cite>
+                            </a>
+                        </dl>
+                    </li>
+				</ul>
+			</div>
+		</div>
+		<div class="layui-body site-content" id="path-body"
+			style="bottom: 0;border-left: solid 2px #1AA094;">
+            {{!-- body 内容  $ref = temp_body --}}
+            <table class="layui-table">
+                <tbody>
+                <tr>
+                    <th>Swagger版本</th>
+                    <td colspan="3">{{:swagger}}</td>
+                </tr>
+                <tr>
+                    <th>项目名称</th>
+                    <td colspan="3">{{:info.title}}</td>
+                </tr>
+                <tr>
+                    <th>项目简介</th>
+                    <td colspan="3">{{:info.description}}</td>
+                </tr>
+                <tr>
+                    <th>API作者</th>
+                    <td colspan="3">{{:info.contact.name}}</td>
+                </tr>
+                <tr>
+                    <th>API版本</th>
+                    <td colspan="3">{{:info.version}}</td>
+                </tr>
+                <!-- <tr>
+                    <th>host</th>
+                    <td colspan="3">{{:host}}</td>
+                </tr>-->
+                <tr>
+                    <th>服务url</th>
+                    <td colspan="3">{{:info.termsOfService}}</td>
+                </tr>
+                </tbody>
+            </table>
+		</div>
+		<div class="layui-footer footer">
+            <div class="layui-main">
+            <p><a href="{{:info.license.url}}">{{:info.license.name}}</a></p>
+            </div>
+        </div>
+	</div>
+</script>
+<script id="temp_body" type="text/template">
+    <div class="layui-tab layui-tab-brief">
+        <ul class="layui-tab-title">
+            <li class="layui-this"><span class="method {{:method}}" m_operationId ="{{:operationId}}" path="{{:path}}" method = "{{:method}}">{{:method}}</span>{{:path}}</li>
+            <li>调试接口</li>
+        </ul>
+        <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0px 0px; height: 803px;">
+            <div class="layui-tab-item layui-show">
+              <table class="layui-table">
+              <colgroup>
+                <col width="150">
+                <col width="150">
+                <col width="150">
+                <col>
+              </colgroup>
+              <tbody>
+                <tr>
+                  <th>Path</th>
+                  <td colspan="3">{{:path}}</td>
+                </tr>
+                <tr>
+                  <th>Summary</th>
+                  <td colspan="3">{{:summary}}</td>
+                </tr>
+                <tr>
+                  <th>Description</th>
+                  <td colspan="3">{{:description}}</td>
+                </tr>
+                <tr>
+                  <th>Consumes</th>
+                  <td style="width: 250px;">{{:consumes}}</td>
+                  <th>Produces</th>
+                  <td>{{:produces}}</td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- 接口详情页 start-->
+            <fieldset class="layui-elem-field layui-field-title" >
+                <legend>请求参数</legend>
+            </fieldset>
+            <table class="layui-table">
+              <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Parameter Type</th>
+                    <th>Data Type</th>
+                    <th>Required</th>
+                </tr> 
+              </thead>
+              <tbody>
+                {{for parameters}}
+                    <tr>
+                        <td>{{:name}}</td>
+                        <td>{{:description}}</td>
+                        <td>{{:in}}</td>
+                        <td>{{:type}}</td>     
+                        {{if required}}
+                            <td><i class="layui-icon">&#xe618;</i></td>
+                        {{else}}
+                            <td></td>
+                        {{/if}}                   
+                    </tr>
+                {{/for}}
+              </tbody>
+            </table>
+           <!-- <fieldset class="layui-elem-field layui-field-title" >
+                <legend>响应字段解析</legend>
+            </fieldset>
+            <table class="layui-table">
+              <thead>
+                <tr>
+                    <th>Properties</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr> 
+              </thead>
+              <tbody id="path-body-response-model">
+              </tbody>
+            </table>-->
+            </div>
+            <!-- 接口详情页 end-->
+            <!-- 调试页面 start-->
+            <div class="layui-tab-item">
+                <fieldset class="layui-elem-field layui-field-title" >
+                <legend>调试请求参数</legend>
+                </fieldset>
+                <table class="layui-table">
+                  <colgroup>
+                    <col width="150">
+                    <col>
+                    <col>
+                    <col width="150">
+                    <col width="150">
+                   <col>
+                  </colgroup>
+                  <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Value</th>
+                        <th>Description</th>
+                        <th>Data Type</th>
+                        <th>Required</th>
+                    </tr> 
+                  </thead>
+                  <tbody>
+                    {{for parameters}}
+                        <tr>
+                            <td>{{:name}}</td>
+                            <td>
+                            {{if required}}
+                                <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" required="required" placeholder="required" autocomplete="off" class="layui-input">
+                            {{else}}
+                                <input type="text" p_operationId="{{:~root.operationId}}" name="{{:name}}" autocomplete="off" class="layui-input">
+                            {{/if}}  
+                            </td>
+                            <td>{{:description}}</td>
+                            <td>{{:type}}</td>     
+                            {{if required}}
+                                <td><i class="layui-icon">&#xe618;</i></td>
+                            {{else}}
+                                <td></td>
+                            {{/if}}                   
+                        </tr>
+                    {{/for}}
+                  </tbody>
+                </table>
+                <div>
+                    <button class="layui-btn" name="btn_submit" onclick="getData('{{:operationId}}')"> 提交 </button>
+                </div>
+                <fieldset class="layui-elem-field layui-field-title" >
+                    <legend>调试响应结果</legend>
+                </fieldset>
+                <div class="responseJson"><pre id="json-response"></pre>
+            </div>
+            <!-- 调试页面 end-->
+        </div>
+    </div>
+</script>
+<!-- 响应结果 -->
+<script id="temp_response_body" type="text/template">
+    <div class="layui-tab layui-tab-brief">
+        <div class="layui-tab-content" style="min-height: 150px; padding: 5px 0px 0px; height: 803px;">
+            <div class="layui-tab-item layui-show">
+                <fieldset class="zyd-fieldset" >
+                    <legend class="zyd-legend">响应200-Object</legend>
+                    <pre>
+                    <code>
+            {
+                "status": 200,
+                "message": "成功！",
+                "data": {...}
+            }
+                    </code>
+                </pre>
+                </fieldset>
+                <fieldset class="zyd-fieldset" >
+                    <legend class="zyd-legend">响应200-Array</legend>
+                    <pre>
+                    <code>
+            {
+                "status": 200,
+                "message": "成功！",
+                "data": [
+                    {...},{...}
+                ]
+            }
+                    </code>
+                </pre>
+                </fieldset>
+                <fieldset class="zyd-fieldset" >
+                    <legend class="zyd-legend">Other</legend>
+                    <pre>
+                    <code>
+            {
+                "status": 300,
+                "message": "账号或密码错误！",
+                "data": null
+            }
+                    </code>
+                </pre>
+                </fieldset>
+                <div style="clear: both;"></div>
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend>响应字段解析</legend>
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>Properties</th>
+                            <th>Type</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        <tr>
+                            <td>data</td>
+                            <td>object</td>
+                            <td>接口请求成功时返回的数据，Object对应{key:value,...},Array对应[{key:value},...]</td>
+                        </tr>
+
+                        <tr>
+                            <td>message</td>
+                            <td>string</td>
+                            <td>接口返回结果消息</td>
+                        </tr>
+
+                        <tr>
+                            <td>status</td>
+                            <td>integer</td>
+                            <td>接口返回结果状态码</td>
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </fieldset>
+                <fieldset class="layui-elem-field layui-field-title">
+                    <legend><code>status</code>状态码参考</legend>
+                    <table class="layui-table">
+                        <thead>
+                        <tr>
+                            <th>code</th>
+                            <th>Description</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr><td>200</td><td>成功</td></tr>
+                        <tr><td>300</td><td>参考 <i>message</i> </td></tr>
+                        <tr><td>301</td><td>tonken无效或者请求超时</td></tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </div>
+            <!-- 接口详情页 end-->
+            </div>
+        </div>
+</script>
+<script id="temp_body_response_model" type="text/template">
+   {{props properties}}
+    <tr>
+        <td>{{:key}}</td>
+        <td>{{:prop.type}}</td>
+        <td>{{:prop.description}}</td>
+    </tr>
+   {{/props}} 
+</script>
+
+</body>
+<script src="/style/layui/layui.js"></script>
+<script src="/style/js/jquery.js"></script>
+<script src="/style/js/jsrender.min.js"></script>
+<script src="/style/js/jquery.json-viewer.js"></script>
+<script type="text/javascript">
+    var apiHost = "http://localhost:8082";
+
+	$.views.settings.allowCode(true);
+	$.views.converters("getResponseModelName", function(val) {
+	  return getResponseModelName(val);
+	});
+
+    var tempBody = $.templates('#temp_body');
+    var temp_response_body = $.templates('#temp_response_body');
+    var tempBodyResponseModel = $.templates('#temp_body_response_model');
+
+    $(function(){
+	    $.ajax({
+	        url : apiHost + "/v2/api-docs",
+// 	        url : "http://petstore.swagger.io/v2/swagger.json",
+	        dataType : "json",
+	        type : "get",
+	        async : false,
+	        success : function(data) {
+	            //layui init
+	            layui.use([ 'layer','jquery', 'element' ], function() {
+		            var $ = layui.jquery, layer = layui.layer, element = layui.element;
+		        });
+	            var jsonData = eval(data);
+	            $("#title").html(jsonData.info.title);
+	            $("body").html($("#template").render(jsonData));
+	            
+	            $("[name='a_path']").click(function(){
+		            var path = $(this).attr("path");
+		            var method = $(this).attr("method");
+		            var operationId = $(this).attr("operationId");
+		            $.each(jsonData.paths[path],function(i,d){
+		              if(d.operationId == operationId){
+                          d.path = path;
+                          d.method = method;
+		                  //console.log(d);
+			              $("#path-body").html(tempBody.render(d));
+//                          var modelName = getResponseModelName(d.responses["200"]["schema"]["$ref"]);
+//                          if(modelName){
+//                            $("#path-body-response-model").html(tempBodyResponseModel.render(jsonData.definitions[modelName]));
+//                          }
+		              }
+		            });
+		        });
+		        
+		       $("[name='btn_submit']").click(function(){
+		            console.log(operationId);
+		            var operationId = $(this).attr("operationId");
+		            var parameterJson = {};
+		            $("input[operationId='"+operationId+"']").each(function(index, domEle){
+		                var k = $(domEle).attr("name");
+		                var v = $(domEle).val();
+		                parameterJson.push({k:v});
+		            });
+		            console.log(parameterJson);
+		        });
+
+                $("#resposneModel").click(function(){
+                    $("#path-body").html(temp_response_body.render(1));
+                });
+		        
+	        }
+	    });
+        
+    });
+    
+	function getResponseModelName(val){
+	  if(!val){
+	    return null;
+	  }
+	  return val.substring(val.lastIndexOf("/")+1,val.length);
+	}
+	
+	function getData(operationId){
+	   var parameter = "";
+       $("[p_operationId='"+operationId+"']").each(function(index, domEle){
+           var k = $(domEle).attr("name");
+           var v = $(domEle).val();
+           if(v){
+	           parameter += k+"="+v+"&";
+           }
+       });
+       parameter = parameter.substring(0,parameter.length-1)
+	   
+       $.ajax({
+		   type: $("[m_operationId='"+operationId+"']").attr("method"),
+		   url: apiHost + $("[m_operationId='"+operationId+"']").attr("path"),
+		   data: parameter,
+		   success: function(data){
+		     var options = {
+              withQuotes: true
+             };
+		     $("#json-response").jsonViewer(data, options);
+		   }
+	   });
+	}
+	
+</script>
+</html>
