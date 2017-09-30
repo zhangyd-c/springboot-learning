@@ -23,6 +23,7 @@ My Springboot modules
 - [x] 18. [springboot + mybatis + mapper + pageHealper 多数据源](https://github.com/zhangyd-c/springboot/tree/master/springboot-multi-datasource)
 - [x] 19. [Springboot集成SpringRestdocs生成Api文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-restdocs)
 - [x] 20. [Springboot开启HTTPS](https://github.com/zhangyd-c/springboot/tree/master/springboot-ssl)
+- [x] 21. [Springboot整合Swagger2](https://github.com/zhangyd-c/springboot/tree/master/springboot-swagger)
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
