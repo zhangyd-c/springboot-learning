@@ -26,6 +26,7 @@
         <module>springboot-restdocs</module>
         <module>springboot-docker</module>
         <module>springboot-swagger</module>
+        <module>springboot-interceptor</module>
     </modules>
 
 	<parent>

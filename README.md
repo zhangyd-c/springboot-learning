@@ -9,7 +9,7 @@ My Springboot modules
 - [x] 4. [springboot开启任务调度](https://github.com/zhangyd-c/springboot/tree/master/springboot-schedule)
 - [x] 5. [springboot整合logback](https://github.com/zhangyd-c/springboot/tree/master/springboot-logback)
 - [x] 6. [springboot使用过滤器和监听器](https://github.com/zhangyd-c/springboot/tree/master/springboot-servlet)
-- [ ] 7. springboot拦截器
+- [x] 7. [springboot使用拦截器](https://github.com/zhangyd-c/springboot/tree/master/springboot-interceptor)  
 - [x] 8. [springboot使用AOP](https://github.com/zhangyd-c/springboot/tree/master/springboot-aop)
 - [x] 9. [springboot自定义异常处理页面](https://github.com/zhangyd-c/springboot/tree/master/springboot-errorpage)
 - [x] 10. [springboot统一异常处理](https://github.com/zhangyd-c/springboot/tree/master/springboot-exception)
