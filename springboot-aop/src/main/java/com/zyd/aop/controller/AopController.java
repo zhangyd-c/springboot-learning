@@ -1,9 +1,8 @@
 package com.zyd.aop.controller;
 
+import com.zyd.aop.annotation.BusinessLogAnnotation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -28,5 +27,11 @@ public class AopController {
 			params.add(param);
 		}
 		return params;
+	}
+
+	@RequestMapping("/log")
+	@BusinessLogAnnotation("查看log")
+	public Object log(HttpServletRequest request) {
+		return request.getRequestURL();
 	}
 }
