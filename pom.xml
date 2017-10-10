@@ -27,6 +27,7 @@
         <module>springboot-docker</module>
         <module>springboot-swagger</module>
         <module>springboot-interceptor</module>
+        <module>springboot-validator</module>
     </modules>
 
 	<parent>
