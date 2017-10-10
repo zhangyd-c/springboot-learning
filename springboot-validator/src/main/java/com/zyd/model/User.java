@@ -18,7 +18,6 @@ package com.zyd.model;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.hibernate.validator.constraints.URL;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -49,7 +48,8 @@ public class User {
     @Email(message = "默认的邮箱验证@Email不通过")
     private String email;
 
-    @URL(host = "www.baidu.com", message = "URL格式不正确")
+//    @URL(host = "www.baidu.com", message = "URL格式不正确")
+    @Pattern(regexp = "(https?|ftp|file)://[-A-Za-z0-9+&@#/%?=~_|!:,.;]+[-A-Za-z0-9+&@#/%=~_|]", message = "URL格式不正确")
     private String url;
 
     public String getUsername() {
