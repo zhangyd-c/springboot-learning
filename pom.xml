@@ -28,6 +28,7 @@
         <module>springboot-swagger</module>
         <module>springboot-interceptor</module>
         <module>springboot-validator</module>
+		<module>springboot-websocket</module>
     </modules>
 
 	<parent>

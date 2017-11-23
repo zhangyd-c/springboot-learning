@@ -24,7 +24,8 @@ My Springboot modules
 - [x] 19. [Springboot集成SpringRestdocs生成Api文档](https://github.com/zhangyd-c/springboot/tree/master/springboot-restdocs)
 - [x] 20. [Springboot开启HTTPS](https://github.com/zhangyd-c/springboot/tree/master/springboot-ssl)
 - [x] 21. [Springboot整合Swagger2](https://github.com/zhangyd-c/springboot/tree/master/springboot-swagger)
-- [x] 21. [Springboot使用Validator校验](https://github.com/zhangyd-c/springboot/tree/master/springboot-validator)
+- [x] 22. [Springboot使用Validator校验](https://github.com/zhangyd-c/springboot/tree/master/springboot-validator)
+- [x] 22. [Springboot + WebSocket](https://github.com/zhangyd-c/springboot/tree/master/springboot-websocket)
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
