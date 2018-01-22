@@ -10,13 +10,13 @@
 `@Scheduled(fixedDelay = 1000)` ：上一次执行完毕后间隔1秒再执行</br>
 `@Scheduled(initialDelay=1000, fixedRate=2000)` ：第一次延迟1秒后执行，之后按fixedRate的规则每2秒执行一次</br>
 
-##### 项目中定时使用到cron表达式，详细使用方法，请参考[SpringTask中cron表达式整理记录](http://www.flyat.cc/article/120cd0ed892042e99f0d185ec12af968)
+##### 项目中定时使用到cron表达式，详细使用方法，请参考[SpringTask中cron表达式整理记录](http://www.zhyd.me/article/43)
 
 # 增加动态修改cron的功能
 
 ##### 本地只做测试，cron都是写死在程序中的，可以根据业务进行扩展，包括将cron持久化到DB中
 
-```java
+```
  @Override
 public void configureTasks(ScheduledTaskRegistrar taskRegistrar) {
     // 定时任务一
