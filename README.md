@@ -1,5 +1,5 @@
 # springboot
-My Springboot modules
+spring boot学习案例，方便spring boot 初学者快速掌握相关知识
 
 #### Springboot + maven 多模块项目
 
