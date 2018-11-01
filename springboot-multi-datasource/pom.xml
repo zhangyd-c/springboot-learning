@@ -11,8 +11,8 @@
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
-		<groupId>com.zyd</groupId>
-		<artifactId>springboot</artifactId>
+		<groupId>me.zhyd.springboot</groupId>
+		<artifactId>springboot-learning</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 

@@ -2,7 +2,7 @@
  * Copyright © 2017 Innodev. All rights reserved.
  * 
  * @Title ExceptionHandle.java 
- * @Package com.zyd.exception.handle
+ * @Package me.zhyd.springboot.exception.handle
  * @author <a href="mailto:yadong.zhang0415@gmail.com">yadong.zhang</a> 
  * @date 2017年6月7日 下午4:55:59 
  * @version V1.0   

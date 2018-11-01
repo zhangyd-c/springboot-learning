@@ -31,7 +31,6 @@ import java.lang.reflect.Method;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.aop.aspects
  *
  * @Author: yadong.zhang
  * @Date: 2017/10/10 12:56

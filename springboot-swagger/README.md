@@ -41,7 +41,7 @@ public class Swagger2Config {
                 .apiInfo(apiInfo())
                 .select()
                 //为当前包路径
-                .apis(RequestHandlerSelectors.basePackage("com.zyd.controller"))
+                .apis(RequestHandlerSelectors.basePackage("me.zhyd.springboot.controller"))
                 .paths(PathSelectors.any())
                 .build();
     }

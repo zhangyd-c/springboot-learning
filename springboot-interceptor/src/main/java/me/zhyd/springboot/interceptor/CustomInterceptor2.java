@@ -23,7 +23,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.interceptor
+ * Created by yadong.zhang on me.zhyd.springboot.interceptor
  *
  * @Author: yadong.zhang
  * @Date: 2017/9/30 11:57

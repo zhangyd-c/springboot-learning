@@ -22,7 +22,7 @@ import java.lang.annotation.Target;
 
 /**
  * springboot
- * Created by yadong.zhang on com.zyd.aop.annotation
+ * Created by yadong.zhang on me.zhyd.springboot.aop.annotation
  *
  * @Author: yadong.zhang
  * @Date: 2017/10/10 12:55
