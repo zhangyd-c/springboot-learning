@@ -25,7 +25,8 @@ spring boot学习案例，方便spring boot 初学者快速掌握相关知识
 - [x] 20. [Springboot开启HTTPS](https://github.com/zhangyd-c/springboot/tree/master/springboot-ssl)
 - [x] 21. [Springboot整合Swagger2](https://github.com/zhangyd-c/springboot/tree/master/springboot-swagger)
 - [x] 22. [Springboot使用Validator校验](https://github.com/zhangyd-c/springboot/tree/master/springboot-validator)
-- [x] 22. [Springboot + WebSocket](https://github.com/zhangyd-c/springboot/tree/master/springboot-websocket)
+- [x] 23. [Springboot + WebSocket](https://github.com/zhangyd-c/springboot/tree/master/springboot-websocket)
+- [x] 24. [md5方式加密静态引用资源](https://github.com/zhangyd-c/springboot/tree/master/springboot-urlprovider)
 
 ## 生命不息，折腾不止！
 ### 更多信息，请关注：
