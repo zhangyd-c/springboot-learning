@@ -55,7 +55,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>1.5.4.RELEASE</version>
                 <configuration>
-                    <mainClass>com.zyd.ssl.SampleTomcatSslApplication</mainClass>
+                    <mainClass>me.zhyd.springboot.ssl.SslApplication</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
             </plugin>

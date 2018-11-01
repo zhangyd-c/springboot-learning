@@ -33,24 +33,14 @@
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
-		<!--
-			Spring Boot应用启动器Starter-parent:
-			官方推荐
-			其中集成了：
-			1、使用java6编译级别
-			2、使用utf-8编码
-			3、实现了通用的测试框架 (JUnit, Hamcrest, Mockito).
-			4、智能资源过滤
-			5、智能的插件配置(exec plugin, surefire, Git commit ID, shade).
-		-->
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.5.6.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.7</java.version>
+		<java.version>1.8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>

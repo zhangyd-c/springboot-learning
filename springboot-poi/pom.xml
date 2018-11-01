@@ -73,7 +73,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<mainClass>com.zyd.poi.Applaction</mainClass>
+					<mainClass>me.zhyd.springboot.poi.PoiApplaction</mainClass>
 				</configuration>
 			</plugin>
 		</plugins>
