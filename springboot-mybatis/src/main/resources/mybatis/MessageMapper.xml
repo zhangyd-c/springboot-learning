@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//testMybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="me.zhyd.springboot.mybatis.mapper.MessageMapper">
+    <resultMap id="message_map" type="me.zhyd.springboot.mybatis.bean.Message">
+        <id property="id" column="ID" jdbcType="INTEGER"></id>
+        <result property="ip" column="IP" jdbcType="VARCHAR"></result>
+        <result property="insertTime" column="INSERT_TIME" jdbcType="DATE"></result>
+        <result property="nickName" column="NICK_NAME" jdbcType="VARCHAR"></result>
+    </resultMap>
+    <select id="listByMapperXml" resultMap="message_map">
+		select * from message
+	</select>
+</mapper>

@@ -1,23 +1,19 @@
 package me.zhyd.springboot.mybatis.mapper;
 
-import me.zhyd.springboot.mybatis.entity.Message;
-import me.zhyd.springboot.mybatis.util.MyMapper;
+import me.zhyd.springboot.mybatis.bean.Message;
+import me.zhyd.springboot.mybatis.util.BaseMapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
 /**
- * @author zhangyd
- * @version V1.0
- * @Description
- * @date 2017年3月10日 下午2:42:45
- * @modify
- * @Review
- * @since JDK ： 1.7
+ * @author yadong.zhang (yadong.zhang0415(a)gmail.com)
+ * @version 1.0
+ * @website https://www.zhyd.me
+ * @date 2018/11/5 18:17
+ * @since 1.8
  */
 @Repository
-public interface MessageMapper extends MyMapper<Message> {
-    List<Message> list();
-
-    int count();
+public interface MessageMapper extends BaseMapper<Message> {
+    List<Message> listByMapperXml();
 }

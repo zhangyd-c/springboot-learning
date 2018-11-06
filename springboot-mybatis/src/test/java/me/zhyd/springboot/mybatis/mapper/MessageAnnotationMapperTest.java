@@ -15,7 +15,7 @@
  */
 package me.zhyd.springboot.mybatis.mapper;
 
-import me.zhyd.springboot.mybatis.entity.Message;
+import me.zhyd.springboot.mybatis.bean.Message;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

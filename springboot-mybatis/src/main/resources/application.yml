@@ -1,0 +1,40 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springboot_learning?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true&useSSL=false&allowPublicKeyRetrieval=true
+        username: root
+        password: root
+    freemarker:
+        allow-request-override: false
+        allow-session-override: false
+        cache: false
+        charset: UTF-8
+        check-template-location: true
+        content-type: text/html
+        enabled: true
+        expose-request-attributes: false
+        expose-session-attributes: false
+        expose-spring-macro-helpers: true
+        prefer-file-system-access: true
+        suffix: .ftl
+        template-loader-path: classpath:/templates/
+        settings:
+            template_update_delay: 0
+            default_encoding: UTF-8
+            classic_compatible: true
+# MyBatis
+mybatis:
+  type-aliases-package: com.zyd.mybatis.com.rest.entity
+  mapper-locations: classpath:/mybatis/*.xml
+  # mapper
+mapper:
+  mappers:
+  - me.zhyd.springboot.mybatis.util.BaseMapper
+  not-empty: false
+  identity: MYSQL
+  # pagehelper
+pagehelper:
+  helper-dialect: mysql
+  reasonable: "true"
+  support-methods-arguments: "true"
+  params: count=countSql
