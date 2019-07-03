@@ -1,18 +1,3 @@
-/**
- * Copyright [2016-2017] [yadong.zhang]
- * <p>
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * <p>
- * http://www.apache.org/licenses/LICENSE-2.0
- * <p>
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
 package me.zhyd.springboot.multi.config;
 
 import org.apache.ibatis.session.SqlSessionFactory;
@@ -20,8 +5,8 @@ import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceBuilder;
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -33,11 +18,12 @@ import javax.sql.DataSource;
 /**
  * springboot
  * Created by yadong.zhang on com.zyd.multi.config
+ *
  * @Author: yadong.zhang
  * @Date: 2017/8/29 18:13
  */
 @Configuration
-@MapperScan(basePackages = "com.zyd.multi.mapper.primary", sqlSessionTemplateRef  = "primaryTestSqlSessionTemplate")
+@MapperScan(basePackages = "com.zyd.multi.mapper.primary", sqlSessionTemplateRef = "primaryTestSqlSessionTemplate")
 public class PrimaryTestDataSourceConfig {
 
     @Bean(name = "primaryTestDataSource")
